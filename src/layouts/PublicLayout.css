@@ -1,0 +1,15 @@
+/* =========================================
+   PUBLIC LAYOUT
+========================================= */
+
+.public-layout {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.public-content {
+  width: 100%;
+  min-height: 70vh;
+  overflow-x: hidden;
+}
