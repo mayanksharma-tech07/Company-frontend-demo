@@ -139,269 +139,274 @@ function Contact() {
 
           {/* SOCIAL */}
 
+
           <div className="contact-social">
 
             <span>FOLLOW OUR WORK</span>
 
             <div className="social-links">
 
-              <a href="#" aria-label="Instagram">
+              <button type="button" aria-label="Instagram">
                 IG
-              </a>
+              </button>
 
-              <a href="#" aria-label="LinkedIn">
+              <button type="button" aria-label="LinkedIn">
                 IN
-              </a>
+              </button>
 
-              <a href="#" aria-label="Facebook">
+              <button type="button" aria-label="Facebook">
                 FB
-              </a>
+              </button>
 
             </div>
 
           </div>
+
+
+
+        </div>
+
+    
+
+
+      {/* RIGHT SIDE FORM */}
+
+      <div className="contact-form-wrapper">
+
+        <div className="form-heading">
+
+          <span>PROJECT ENQUIRY</span>
+
+          <h3>
+            Tell us about
+            <strong> your project.</strong>
+          </h3>
 
         </div>
 
 
-        {/* RIGHT SIDE FORM */}
+        <form onSubmit={handleSubmit}>
 
-        <div className="contact-form-wrapper">
+          <div className="form-row">
 
-          <div className="form-heading">
+            <div className="form-group">
 
-            <span>PROJECT ENQUIRY</span>
+              <label>Your Name</label>
 
-            <h3>
-              Tell us about
-              <strong> your project.</strong>
-            </h3>
-
-          </div>
-
-
-          <form onSubmit={handleSubmit}>
-
-            <div className="form-row">
-
-              <div className="form-group">
-
-                <label>Your Name</label>
-
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Enter your name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-
-              </div>
-
-
-              <div className="form-group">
-
-                <label>Email Address</label>
-
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-
-              </div>
-
-            </div>
-
-
-            <div className="form-row">
-
-              <div className="form-group">
-
-                <label>Phone Number</label>
-
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Enter phone number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                />
-
-              </div>
-
-
-              <div className="form-group">
-
-                <label>Required Service</label>
-
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                >
-
-                  <option value="">
-                    Select a service
-                  </option>
-
-                  <option value="Aluminium">
-                    Aluminium Solutions
-                  </option>
-
-                  <option value="Glass">
-                    Glass Solutions
-                  </option>
-
-                  <option value="Facade">
-                    Facade Solutions
-                  </option>
-
-                  <option value="Interior">
-                    Interior Solutions
-                  </option>
-
-                  <option value="Other">
-                    Other Requirement
-                  </option>
-
-                </select>
-
-              </div>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
 
             </div>
 
 
             <div className="form-group">
 
-              <label>Project Details</label>
+              <label>Email Address</label>
 
-              <textarea
-                name="message"
-                rows="6"
-                placeholder="Tell us a little about your project..."
-                value={formData.message}
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
                 onChange={handleChange}
                 required
-              ></textarea>
+              />
+
+            </div>
+
+          </div>
+
+
+          <div className="form-row">
+
+            <div className="form-group">
+
+              <label>Phone Number</label>
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter phone number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+              />
 
             </div>
 
 
-            <div className="form-bottom">
+            <div className="form-group">
 
-              <p>
-                By submitting this form, you agree to be
-                contacted regarding your enquiry.
-              </p>
+              <label>Required Service</label>
 
-              <button type="submit">
-                Send Enquiry
-                <span>↗</span>
-              </button>
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                required
+              >
+
+                <option value="">
+                  Select a service
+                </option>
+
+                <option value="Aluminium">
+                  Aluminium Solutions
+                </option>
+
+                <option value="Glass">
+                  Glass Solutions
+                </option>
+
+                <option value="Facade">
+                  Facade Solutions
+                </option>
+
+                <option value="Interior">
+                  Interior Solutions
+                </option>
+
+                <option value="Other">
+                  Other Requirement
+                </option>
+
+              </select>
 
             </div>
 
-          </form>
-
-        </div>
-
-      </section>
+          </div>
 
 
-      {/* ================= SERVICE STRIP ================= */}
+          <div className="form-group">
 
-      <section className="contact-services">
+            <label>Project Details</label>
 
-        <div className="contact-services-heading">
-
-          <span>WHAT HAPPENS NEXT</span>
-
-          <h2>
-            Simple process.
-            <strong> Clear communication.</strong>
-          </h2>
-
-        </div>
-
-
-        <div className="contact-process">
-
-          <div className="process-item">
-
-            <span>01</span>
-
-            <h3>Share your requirement</h3>
-
-            <p>
-              Tell us about your project, timeline and
-              requirements.
-            </p>
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Tell us a little about your project..."
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
 
           </div>
 
 
-          <div className="process-item">
-
-            <span>02</span>
-
-            <h3>We understand & plan</h3>
+          <div className="form-bottom">
 
             <p>
-              Our team reviews your requirement and
-              recommends the right approach.
+              By submitting this form, you agree to be
+              contacted regarding your enquiry.
             </p>
+
+            <button type="submit">
+              Send Enquiry
+              <span>↗</span>
+            </button>
 
           </div>
 
+        </form>
 
-          <div className="process-item">
+      </div>
 
-            <span>03</span>
-
-            <h3>Let's make it happen</h3>
-
-            <p>
-              Once everything is aligned, our team moves
-              towards execution.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
+    </section>
 
 
-      {/* ================= CTA ================= */}
+      {/* ================= SERVICE STRIP ================= */ }
 
-      <section className="contact-cta">
+  <section className="contact-services">
 
-        <div>
+    <div className="contact-services-heading">
 
-          <span>READY WHEN YOU ARE</span>
+      <span>WHAT HAPPENS NEXT</span>
 
-          <h2>
-            Have a project
-            <strong> in mind?</strong>
-          </h2>
+      <h2>
+        Simple process.
+        <strong> Clear communication.</strong>
+      </h2>
 
-        </div>
+    </div>
 
-        <a href="tel:+919876543210">
-          Call Our Team
-          <span>↗</span>
-        </a>
 
-      </section>
+    <div className="contact-process">
 
-    </main>
+      <div className="process-item">
+
+        <span>01</span>
+
+        <h3>Share your requirement</h3>
+
+        <p>
+          Tell us about your project, timeline and
+          requirements.
+        </p>
+
+      </div>
+
+
+      <div className="process-item">
+
+        <span>02</span>
+
+        <h3>We understand & plan</h3>
+
+        <p>
+          Our team reviews your requirement and
+          recommends the right approach.
+        </p>
+
+      </div>
+
+
+      <div className="process-item">
+
+        <span>03</span>
+
+        <h3>Let's make it happen</h3>
+
+        <p>
+          Once everything is aligned, our team moves
+          towards execution.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  {/* ================= CTA ================= */ }
+
+  <section className="contact-cta">
+
+    <div>
+
+      <span>READY WHEN YOU ARE</span>
+
+      <h2>
+        Have a project
+        <strong> in mind?</strong>
+      </h2>
+
+    </div>
+
+    <a href="tel:+919876543210">
+      Call Our Team
+      <span>↗</span>
+    </a>
+
+  </section>
+
+    </main >
   );
 }
 
